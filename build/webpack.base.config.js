@@ -1,12 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TSChecker = require('fork-ts-checker-webpack-plugin')
 module.exports = {
-    entry: './src/index.ts',
+    entry: {
+        'app': './src/index.tsx'
+    },
     output: {
-        filename: 'app.js'
+        filename: '[name].[chunkhash:8]app.js'
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
     module: {
         rules: [
@@ -27,5 +29,10 @@ module.exports = {
             template: './src/tpl/index.html'
         }),
         new TSChecker()
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
 }

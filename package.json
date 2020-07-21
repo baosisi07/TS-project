@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/baosisi07/TS-project#readme",
   "devDependencies": {
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "clean-webpack-plugin": "^3.0.0",
     "fork-ts-checker-webpack-plugin": "^5.0.7",
     "html-webpack-plugin": "^4.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.6",
     "webpack": "^4.43.0",
