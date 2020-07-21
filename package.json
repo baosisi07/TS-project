@@ -21,6 +21,7 @@
   "homepage": "https://github.com/baosisi07/TS-project#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "fork-ts-checker-webpack-plugin": "^5.0.7",
     "html-webpack-plugin": "^4.3.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.6",

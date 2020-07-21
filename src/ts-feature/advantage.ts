@@ -1,18 +1,18 @@
 // 类型保护
 
-interface Aa {
+export interface Aa {
     eat(): {};
     fly(): {}
 }
 
-interface Bb {
+export interface Bb {
     eat(): {};
     say(): {}
 }
 
 function protA(arg:Aa | Bb) {
     arg.eat() // 可直接访问公共属性
-    if((<Aa>arg).fly) { // 访问其他方法需要加类型断言
+    if((<Aa>arg).fly()) { // 访问其他方法需要加类型断言
         (<Aa>arg).fly()
     } else {
         (<Bb>arg).say()
@@ -24,12 +24,12 @@ function isAa(arg: Aa | Bb): arg is Aa { // arg is Aa 是类型谓词
         return (<Aa>arg).fly !== undefined
     }
 
-function protB(arg: Aa | Bb) {
+export function protB(arg: Aa | Bb) {
     arg.eat()
     if (isAa(arg)) {
-        arg.fly
+        arg.fly()
     } else {
-        arg.say
+        arg.say()
     }
 }
 

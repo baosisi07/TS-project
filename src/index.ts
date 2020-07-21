@@ -1,13 +1,15 @@
 
-// var message:string = "Hello World" 
-// console.log(message)
-// var tuple = [10, '123'];
-// tuple[0] = 20;
-// console.log(tuple)
 
-// var num:number|string;
-// num = 12;
-// console.log(num)
-// num = "123456";
-// console.log(num)
-// document.querySelectorAll(".app")[0].innerHTML = message;
+import { protB, Aa, Bb} from './ts-feature/advantage'
+
+const sa:Aa = {
+    eat() {
+        console.log('eat')
+        return '1'
+    },
+    fly() {
+        console.log('fly')
+        return '1'
+    }
+}
+protB(sa)
